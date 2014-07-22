@@ -34,6 +34,12 @@ by a MySQL database.  PHP was used to develop the web frontend.  The portal fron
   * submitting study and/or trial metdata?
   * transferring the raw data files?
 
+* Can we setup a Globus endpoint on the remote storage server and use Globus
+  to streamline file transport?
+
+* Perhaps the Globus team would be interested in using this as a test case for
+  their [Globus Publishing Service](https://www.globus.org/data-publication)?
+
 
 ## Known Issues
 
