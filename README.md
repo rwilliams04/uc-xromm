@@ -3,7 +3,7 @@
 The RCC is working with [Callum Ross](http://pondside.uchicago.edu/oba/faculty/ross_c.html) and [his lab](http://rosslab.uchicago.edu/) to streamline the
 the collection and publication of [XROMM](http://www.xromm.org/) (X-ray Reconstruction of Moving Morphology) datasets.
 
-Our initial efforts will be focused on the packaging of study/experiment/trial data and towards streamlining the process for submitting this data to Brown's [XMA (X-ray Motion Analysis) Portal](http://xmaportal.org/).
+Our initial efforts will be focused on the [packaging](http://data.okfn.org/doc/data-package) of study/experiment/trial data and towards streamlining the process of submitting this data to Brown's [XMA (X-ray Motion Analysis) Portal](http://xmaportal.org/).
 
 
 ## Background
@@ -14,19 +14,21 @@ Bone motion data comes from two high-speed, biplanar x-ray movies.  Bone morphol
 
 See Brown's [XROMM site](http://www.xromm.org/) for additional details on this particular method of analyzing skeletal kinematics.
 
+See our [notes](portal.md) for an overview of the XMA portal.
+
 
 ## Players
 
 #### Ross Lab
 
-* Callum Ross (PI and Project Lead)
+* [Callum Ross](http://pondside.uchicago.edu/oba/faculty/ross_c.html) (PI and Project Lead)
 
 #### RCC
 
-* Jason Voigt (Point Man)
+* Jason Voigt (current point man)
 * Richard Williams (will work in close liaison with the Ross Lab)
 * Robin Weiss
 
-#### Brown
+#### Brown / XMA Portal
 
 * Kia Huffman ([XMA Portal](http://xmaportal.org/) admin)
