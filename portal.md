@@ -4,13 +4,22 @@ Kia Huffman is the admin for the [XMA Portal](http://xmaportal.org/) at Brown.
 The portal allows users to "publish" and share their x-ray motion analysis data
 (i.e., the trial data generated in the course of experimental studies).
 
-The XMA Portal at Brown is one instance of an XROMM data **repository**.
-
-Each repository contains a number of **studies**. Each study is associated with one or more PIs (Principal Investigator) and a **Study Leader** (usually a grad student or postdoc coordinating the experiments).  Each study is in turn comprised of a number of **trials**.  A trial contains references to the uploaded raw data files (calibration and video files) associated with the given trial and other relevant metadata.
+The XMA Portal at Brown is one instance of an XROMM data **repository**.  Each repository contains a number of **studies**. Each study is associated with one or more PIs (Principal Investigator) and a **Study Leader** (usually a grad student or postdoc coordinating the experiments).  Each study is in turn comprised of a number of **trials**.  A trial contains references to the uploaded raw data files (calibration and video files) associated with the given trial and other relevant metadata.
 
 At least the initial incarnation of the portal was hosted at Brown's Brainerd
 research lab.  They had 24TB available for file storage.  The portal was backed
 by a MySQL database.  PHP was used to develop the web frontend.  The portal frontend enables users to create studies, upload trial data, and associate metadata with the uploaded files.
+
+
+## Resources
+
+* [User Manual](https://wiki.brown.edu/confluence/display/ctx/XMA+Portal+User+Manual)
+
+* [UChicago Test Study](http://xmaportal.org/sandbox/larequest.php?request=exploreStudy&StudyID=45&instit=SANDBOX1) - our staging area for testing purposes
+
+* Example studies
+  * [Alligator Coracoid](http://xmaportal.org/sandbox/larequest.php?request=explorePublicStudy&StudyID=6&instit=SANDBOX1) - sample data for the markerless XROMM short-course tutorial
+  * [Pig Feeding](http://xmaportal.org/sandbox/larequest.php?request=explorePublicStudy&StudyID=5&instit=SANDBOX1) - sample data for the marker-based XROMM short-course tutorial
 
 
 ## Questions
