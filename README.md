@@ -3,7 +3,7 @@
 The RCC is working with [Callum Ross](http://pondside.uchicago.edu/oba/faculty/ross_c.html) and [his lab](http://rosslab.uchicago.edu/) to streamline the
 the collection and publication of [XROMM](http://www.xromm.org/) (X-ray Reconstruction of Moving Morphology) datasets.
 
-Our initial efforts will be focused on the [packaging](http://data.okfn.org/doc/data-package) of study/experiment/trial data and towards streamlining the process of submitting this data to Brown's [XMA (X-ray Motion Analysis) Portal](http://xmaportal.org/).
+Our initial efforts will be focused on the [packaging](http://data.okfn.org/doc/data-package) of study/trial data and towards streamlining the process of submitting this data to Brown's [XMA (X-ray Motion Analysis) Portal](http://xmaportal.org/).
 
 
 ## Background
