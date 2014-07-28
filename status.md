@@ -1,8 +1,15 @@
 ## 2014-07-24
 
-Robin and Jason are meeting with Kia via Skype on 2014-07-24.  She'll be
-providing an overview of the Portal's trial creation and file upload
-workflow via the web interface.  We hope to get some insight into the Portal's backend infrastructure and explore alternative routes for file/data transfer ... perhaps discuss longer-term options for hosting our own repository and the handling of metadata exchange.
+The RCC team met with Kia via Skype on 2014-07-24.  Kia provided overview of the Portal's trial creation and file upload workflow via the web interface.  
+
+We decided it would be easiest to host a local copy of the XMA Portal for
+experimentation and potentially customize for the particular needs of the Ross Lab. The plan is to setup a dedicated VM for the portal.
+
+The XMA portal is built on a basic LAMP stack.  Kia is going to provide Robin with specific dependencies and Robin is going to talk to Andy about setting up the VM.
+
+Kia is going to send Jason the database schema so we can understand the basic
+table structure and overall organization of the portal's backend storage
+layer.
 
 
 ## 2014-07-22 

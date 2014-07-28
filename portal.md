@@ -22,25 +22,6 @@ by a MySQL database.  PHP was used to develop the web frontend.  The portal fron
   * [Pig Feeding](http://xmaportal.org/sandbox/larequest.php?request=explorePublicStudy&StudyID=5&instit=SANDBOX1) - sample data for the marker-based XROMM short-course tutorial
 
 
-## Questions
-
-* What metadata is needed when creating a new ...
-  * study?
-  * trial?
-
-* What raw data is typically included as part of a trial?
-
-* Can we devise an API for programmatically ...
-  * submitting study and/or trial metdata?
-  * transferring the raw data files?
-
-* Can we setup a Globus endpoint on the remote storage server and use Globus
-  to streamline file transport?
-
-* Perhaps the Globus team would be interested in using this as a test case for
-  their [Globus Publishing Service](https://www.globus.org/data-publication)?
-
-
 ## Known Issues
 
 Kia noted ...

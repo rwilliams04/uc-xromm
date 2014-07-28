@@ -1,9 +1,9 @@
 # UC-XROMM
 
 The RCC is working with [Callum Ross](http://pondside.uchicago.edu/oba/faculty/ross_c.html) and [his lab](http://rosslab.uchicago.edu/) to streamline the
-the collection and publication of [XROMM](http://www.xromm.org/) (X-ray Reconstruction of Moving Morphology) datasets.
+the collection and publication of [XROMM](http://www.xromm.org/) (X-ray Reconstruction of Moving Morphology) datasets.  The Ross Lab would like to send trial data from their [motion capture station](http://www.xcitex.com/procapture-motion-capture-systems.php) to Midway for cataloging in a locally-hosted [XMA (X-ray Motion Analysis) Portal](http://xmaportal.org/).
 
-Our initial efforts will be focused on the [packaging](http://data.okfn.org/doc/data-package) of study/trial data and towards streamlining the process of submitting this data to Brown's [XMA (X-ray Motion Analysis) Portal](http://xmaportal.org/).
+Our initial efforts will be focused on the [packaging](http://data.okfn.org/doc/data-package) of study/trial data (both data files and associated metadata) and towards streamling the transfer of such "datapackages" to Midway.
 
 
 ## Background
@@ -22,6 +22,9 @@ See our [notes](portal.md) for an overview of the XMA portal.
 #### Ross Lab
 
 * [Callum Ross](http://pondside.uchicago.edu/oba/faculty/ross_c.html) (PI and Project Lead)
+* [Fritzie Arce](http://rosslab.uchicago.edu/Members/fritziearce/fritzie-arces-home-page) (Postdoc)
+* [Kazutaka Takahashi](http://home.uchicago.edu/~kazutaka/) (Postdoc)
+* Courtney Orsbon
 
 #### RCC
 
