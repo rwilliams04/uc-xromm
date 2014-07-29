@@ -1,6 +1,6 @@
 ## 2014-07-24
 
-The RCC team met with Kia via Skype on 2014-07-24.  Kia provided overview of the Portal's trial creation and file upload workflow via the web interface.  
+The RCC team met with Kia via Skype on 2014-07-24.  Kia provided an overview of the Portal's trial creation and file upload workflow via the web interface.  
 
 We decided it would be easiest to host a local copy of the XMA Portal for
 experimentation and potentially customize for the particular needs of the Ross Lab. The plan is to setup a dedicated VM for the portal.
@@ -10,6 +10,9 @@ The XMA portal is built on a basic LAMP stack.  Kia is going to provide Robin wi
 Kia is going to send Jason the database schema so we can understand the basic
 table structure and overall organization of the portal's backend storage
 layer.
+
+Having local control over the environment will allow us to experiment with
+alternative methods for submitting trial data.
 
 
 ## 2014-07-22 
