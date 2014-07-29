@@ -3,7 +3,7 @@
 The RCC is working with [Callum Ross](http://pondside.uchicago.edu/oba/faculty/ross_c.html) and [his lab](http://rosslab.uchicago.edu/) to streamline the
 the collection and publication of [XROMM](http://www.xromm.org/) (X-ray Reconstruction of Moving Morphology) datasets.  The Ross Lab would like to send trial data from their [motion capture station](http://www.xcitex.com/procapture-motion-capture-systems.php) to Midway for cataloging in a locally-hosted [XMA (X-ray Motion Analysis) Portal](http://xmaportal.org/).
 
-Our initial efforts will be focused on the [packaging](http://data.okfn.org/doc/data-package) of study/trial data (both data files and associated metadata) and towards streamling the transfer of such "datapackages" to Midway.
+Our initial efforts will be focused on the [packaging](packaging.json) of study/trial data (both data files and associated metadata) and towards streamling the transfer of such "datapackages" to Midway.
 
 
 ## Background
