@@ -1,12 +1,11 @@
 # Packaging
 
-Initial ideas for packaging study and trial data.  See [datapackages](http://data.okfn.org/doc/data-package) for more details on this style of packaging.
+Initial ideas for packaging study and trial data.  See [datapackages](http://data.okfn.org/doc/data-package) for more details on this style of packaging and manifest spec.
 
 
 ## Studies
 
 Sample file layout for storing XROMM **study** data and associated metadata:
-
 
     /project/uc-xromm/studies/
       monkey-feeding/
@@ -32,7 +31,6 @@ Sample file layout for storing XROMM **study** data and associated metadata:
           all-markers.zip
 
 
-
 #### `study.json`
 
 Here's an example `study.json` file for the [`alligator-coracoid`](http://xmaportal.org/sandbox/larequest.php?request=explorePublicStudy&StudyID=6&instit=SANDBOX1) example study.  Note that many of the resources associated with a study might also be [datapackages](http://data.okfn.org/doc/data-package) with their own `package.json` containing metadata for the file(s) comprising that resource.
@@ -42,6 +40,11 @@ Here's an example `study.json` file for the [`alligator-coracoid`](http://xmapor
   "name": "alligator-coracoid",
   "title": "Alligator Coracoid Example Data",
   "description": "Data for markerless XROMM short-course tutorial",
+  "keywords": [
+    "coracoid",
+    "markerless",
+    "example"
+  ],
   "version": "1.0",
   "license": "PDDL-1.0",
   "investigators": "Brainerd, Beth",
