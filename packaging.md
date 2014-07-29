@@ -1,6 +1,6 @@
 # Packaging
 
-Initial ideas for packaging study and trial data.  See [datapackages](http://data.okfn.org/doc/data-package) for an outline of the suggested spec.
+Initial ideas for packaging study and trial data.  See [datapackages](http://data.okfn.org/doc/data-package) for more details on this style of packaging.
 
 
 ## Studies
