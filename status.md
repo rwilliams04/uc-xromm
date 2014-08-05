@@ -1,3 +1,20 @@
+# Status
+
+See list of [open issues](https://github.com/rcc-uchicago/uc-xromm/issues) for future status.
+
+---
+
+## 2014-08-05 
+
+We have a dedicated VM for hosting the XMA Portal at `xromm.rcc.uchicago.edu`.
+
+Kia provided a list of dependencies for the portal and some have been installed
+on the VM, but our SysAdmin wants to review the portal's source files before
+proceeding (to see if all of the listed dependencies are needed?).
+
+Kia informed us that she needs to add copyright and legalese to the source files before she can make them available.
+
+
 ## 2014-07-24
 
 The RCC team met with Kia via Skype on 2014-07-24.  Kia provided an overview of the Portal's trial creation and file upload workflow via the web interface.  
