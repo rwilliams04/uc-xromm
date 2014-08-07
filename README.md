@@ -28,9 +28,10 @@ See our [notes](portal.md) for an overview of the XMA portal.
 
 #### RCC
 
-* Jason Voigt (current point man)
+* [Jason Voigt](https://github.com/joyrexus) (current point man, working remotely as of Aug 16)
+* [Simon Jacobs](https://github.com/sdjacobs) (local point man)
 * Richard Williams (will work in close liaison with the Ross Lab)
-* Robin Weiss
+* [Robin Weiss](https://github.com/RobinWeiss)
 
 #### Brown / XMA Portal
 
