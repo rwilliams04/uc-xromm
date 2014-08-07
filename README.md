@@ -5,6 +5,8 @@ the collection and publication of [XROMM](http://www.xromm.org/) (X-ray Reconstr
 
 Our initial efforts will be focused on the [packaging](packaging.md) of study/trial data (both data files and associated metadata) and towards streamling the transfer of such "datapackages" to Midway.
 
+The RCC will be hosting a testbed instance of the XMA Portal at `xromm.rcc.uchicago.edu`.  
+
 
 ## Background
 
@@ -15,6 +17,8 @@ Bone motion data comes from two high-speed, biplanar x-ray movies.  Bone morphol
 See Brown's [XROMM site](http://www.xromm.org/) for additional details on this particular method of analyzing skeletal kinematics.
 
 See our [notes](portal.md) for an overview of the XMA portal.
+
+The XMA Portal source files are available via [a private repo](https://github.com/rcc-uchicago/xma-portal).  Contact [@joyrexus](https://github.com/joyrexus) for access.
 
 
 ## Players
