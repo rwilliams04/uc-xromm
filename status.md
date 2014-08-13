@@ -1,8 +1,25 @@
 # Status
 
-See list of [open issues](https://github.com/rcc-uchicago/uc-xromm/issues) for future status.
+See list of [open issues](https://github.com/rcc-uchicago/uc-xromm/issues) for status on particular issues.
 
 ---
+
+## 2014-08-13 
+
+In meeting with the Ross Lab yesterday, we confirmed that there will be
+multiple source systems on which experimental data will be generated.  Instead of consolidating the various data files on a system within the Lab, we'll work
+towards automating transfers to a dedicated directory in `/project/rossc`.
+The overall file layout has yet to be determined, but Taka seems to have a rough idea of how it should look.
+
+We [made plans](https://github.com/rcc-uchicago/uc-xromm/issues/3) with Taka to meet after Labor day to work on setting up the transfer scripts.  The current plan is to use cron-triggered rsync jobs.  Then, post-transfer we'll need to parse [a manifest file](https://github.com/rcc-uchicago/uc-xromm/blob/master/packaging.md#studyjson) (included with each package of trial data getting transferred) and use that to automagically add new records to the portal's backend database.  
+
+As we learned in prior meetings, when submitting to Brown’s existing XMA portal, they currently have to go through a cumbersome one-by-one file upload process and manually input the meta-data associated with each file.  They’d of course like to avoid that altogether.
+
+There was also mention of the need for a database dedicated to logging
+experimental runs in a manner similar to the XMA Portal, but with additional
+Lab-specific details.  This would be for internal use only.  Taka indicated
+that he could provide schema details in the coming weeks.
+
 
 ## 2014-08-05 
 
