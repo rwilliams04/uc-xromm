@@ -5,9 +5,9 @@
 
 Specify the various hosts containing files to be transferred.
 
-* hostname.uchicago.edu
-* hostname.uchicago.edu
-* hostname.uchicago.edu
+* `hostname.uchicago.edu`
+* `hostname.uchicago.edu`
+* `hostname.uchicago.edu`
 
 
 ## What are the different media types being transferred?
