@@ -1,4 +1,4 @@
-# rsync checklist
+# Transfer setup questions
 
 
 ## What are the source systems?
