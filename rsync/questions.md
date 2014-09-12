@@ -5,14 +5,9 @@
 
 The various hosts containing files to be transferred:
 
-* Ripple PC: `128.135.180.217`
-* RT Matlab PC: `128.135.180.236`
-* Procapture PC: `128.135.180.159`
-
-
-## Can we create an `rsync` account on each source system for admin access?
-
-> Yes.
+* Ripple PC (`128.135.180.217`)
+* RT Matlab PC (`128.135.180.236`)
+* Procapture PC (`128.135.180.159`)
 
 
 ## What are the different media types being transferred?
@@ -57,7 +52,7 @@ The various hosts containing files to be transferred:
 
 ## Where are the files to be transferred located?
 
-Specify the source paths on each system.
+Source paths on each system:
 
 #### Ripple
 
