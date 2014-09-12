@@ -4,6 +4,12 @@ See list of [open issues](https://github.com/rcc-uchicago/uc-xromm/issues) for s
 
 ---
 
+## 2014-09-11 
+
+Richard met with Ross Lab to consult on initial rsync setup.  Details
+[here](https://github.com/rcc-uchicago/uc-xromm/issues/3).
+
+
 ## 2014-08-13 
 
 In meeting with the Ross Lab yesterday, we confirmed that there will be
