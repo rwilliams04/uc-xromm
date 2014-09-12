@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #specify the time limit for the cron job
-#SBATCH --time=1:0:0
+#SBATCH --time=5:0:0
 
 # use cron.log and append to it
 #SBATCH --output=cron.log
