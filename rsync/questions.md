@@ -94,7 +94,7 @@ We're assuming that they shouldn't be deleted after a transfer.
 
 ## Under what username should the transfer occur?
 
-> All potential users, but depending on password authentication. We will login to all the machines as labadmin and if we use rsynch or globus, we need make sure that each of us has an account with appropriate permission to Midway. 
+> Rsync transfers will occur through cron-like sbatch jobs submitted under the username kazutaka.
 
 
 ## Are there any log files or manifests containing meta-data to be parsed?
