@@ -8,7 +8,21 @@ See list of [open issues](https://github.com/rcc-uchicago/uc-xromm/issues) for s
 
 ## 2014-09-25 
 
+The [UChicago instance](http://xromm.rcc.uchicago.edu) of the XMA Portal is now up and running.  File downloads from a provisional data directory are currently being tested.
+
+
+## 2014-09-20 
+
 After testing rsync config, Taka is going to create some sample data that will be similar to a normal recording day, then check the file sizes, speed, and etc. 
+
+
+## 2014-09-14 
+
+Taka (`kazutaka`) was added to the `cron-account` group in order to submit
+"cron-like" jobs via slurm, viz. to run the nightly rsync transfers.
+
+Daily transfers may sometimes take > 1 hour to complete, so the cron qos was
+upped to allow for jobs running up to 5 hours.
 
 
 ## 2014-09-11 
@@ -22,7 +36,6 @@ Note that Taka is currently unable to test the rsync config because all of the X
 without any internet connection, and we don't know when we can bring them
 back to a room with at least 3 ethernet connections, so most likely I won't
 be able to test the rsync in the upcoming week.
-
 
 
 ## 2014-08-13 
