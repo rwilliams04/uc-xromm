@@ -1,4 +1,6 @@
-## 1. Generate public/private key pair
+## 1. Generate public/private key pair for each source system
+
+    Note: the user submitting the cron-like file transfer script should generate these key pairs.
 
     ssh-keygen -t rsa -b 1024 -C "$(whoami)@$(hostname)-$(date -I)"
 
@@ -7,7 +9,7 @@ Save as ...
     ~/.ssh/id_hostkeyname
 
 
-## 2. Copy public key to local machine
+## 2. Copy each public keys to its respective source machine
 
     ssh-copy-id -i ~/.ssh/id_hostkeyname.pub username@hostname
 
