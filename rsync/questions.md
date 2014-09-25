@@ -89,7 +89,7 @@ Source paths on each system:
 
 We're assuming that they shouldn't be deleted after a transfer.
 
-> No, but once batch process is performed, then we can compress many files 
+> I think we need to delete once batch processes start on Midway, especially image data (as we only have 2 TB disks on the machine), so we might need to have a script to flag the completion of file transfers and parsing of necessary information for meta data and initial batch processes to each PC to delete files. 
 
 
 ## Under what username should the transfer occur?

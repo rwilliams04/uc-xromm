@@ -2,12 +2,27 @@
 
 See list of [open issues](https://github.com/rcc-uchicago/uc-xromm/issues) for status on particular issues.
 
+
 ---
+
+
+## 2014-09-25 
+
+After testing rsync config, Taka is going to create some sample data that will be similar to a normal recording day, then check the file sizes, speed, and etc. 
+
 
 ## 2014-09-11 
 
 Richard met with Ross Lab to consult on initial rsync setup.  Details
 [here](https://github.com/rcc-uchicago/uc-xromm/issues/3).
+
+Note that Taka is currently unable to test the rsync config because all of the XROMM-related systems are now offline. Taka writes ...
+
+> We had to move all the devices that will be in XROMM setup to a room
+without any internet connection, and we don't know when we can bring them
+back to a room with at least 3 ethernet connections, so most likely I won't
+be able to test the rsync in the upcoming week.
+
 
 
 ## 2014-08-13 
