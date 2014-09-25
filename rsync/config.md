@@ -1,4 +1,4 @@
-## 1. Generate public/private key pair for each source system
+## 1. On Midway, generate public/private key pair for each source system
 
     Note: the user submitting the cron-like file transfer script should generate these key pairs.
 
@@ -9,7 +9,7 @@ Save as ...
     ~/.ssh/id_hostkeyname
 
 
-## 2. Copy each public keys to its respective source machine
+## 2. Copy each public key to its respective source machine
 
     ssh-copy-id -i ~/.ssh/id_hostkeyname.pub username@hostname
 
