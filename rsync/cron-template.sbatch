@@ -14,28 +14,47 @@
 
 # Specify a valid cron string for the schedule
 # this is to be submitted everyday at 11:59 PM
-
 SCHEDULE='59 23 * * *'
 
-#Some data are to be transferred with compression, others without.
 
-#Transferring data without compression
-rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_Ripple_PC" labadmin@128.135.180.217:/cygdrive/c/Data  <path to Midway destination directory>
+TAKA_SSH="ssh -i /home/kazutaka/.ssh"       # prefix to ssh keys
+ROSS_EXP=/project/rossc/lab/experiments     # top-level destination directory
 
-#Transferring data with compression
-rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_Ripple_PC" labadmin@128.135.180.217:/cygdrive/c/Data  <path to Midway destination directory>
 
-#Transferring data without compression
-rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_RT_Matlab_PC" labadmin@128.135.180.236:/cygdrive/c/Models  <path to Midway destination directory>
+# Some data are to be transferred with compression, others without.
+# 1. choose appropriate rsync command for each source system
+# 2. specify appropriate destination sub-directory "$ROSS_EXP/<...>"
 
-#Transferring data with compression
-rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_RT_Matlab_PC" labadmin@128.135.180.236:/cygdrive/c/Models  <path to Midway destination directory>
 
-#Transferring data without compression
-rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_Procapture_PC" labadmin@128.135.180.159:/cygdrive/c/Data :/cygdrive/d/Data :/cygdrive/e/Data :/cygdrive/f/Data  <path to Midway destination directory>
+RIPPLE_DATA="labadmin@128.135.180.217:/cygdrive/c/Data"
 
-#Transferring data with compression
-rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_Procapture_PC" labadmin@128.135.180.159:/cygdrive/c/Data :/cygdrive/d/Data :/cygdrive/e/Data :/cygdrive/f/Data  <path to Midway destination directory>
+# no compression
+rsync -vz -e "$TAKA_SSH/id_Ripple_PC"  $RIPPLE_DATA  $ROSS_EXP/<...>
+
+# with compression
+rsync -avz -e "$TAKA_SSH/id_Ripple_PC"  $RIPPLE_DATA  $ROSS_EXP/<...>
+
+
+RT_MATLAB_MODELS="labadmin@128.135.180.236:/cygdrive/c/Models"
+
+# no compression
+rsync -vz -e "$TAKA_SSH/id_RT_Matlab_PC"  $RT_MATLAB_MODELS  $ROSS_EXP/<...>
+
+# with compression
+rsync -avz -e "$TAKA_SSH/id_RT_Matlab_PC" $RT_MATLAB_MODELS  $ROSS_EXP/<...>
+
+
+PROCAPTURE="labadmin@128.135.180.159"
+C_DATA=/cygdrive/c/Data 
+D_DATA=/cygdrive/d/Data 
+E_DATA=/cygdrive/e/Data 
+F_DATA=/cygdrive/f/Data 
+
+# no compression
+rsync -vz -e "$TAKA_SSH/id_Procapture_PC" $PROCAPTURE:$C_DATA :$D_DATA :$E_DATA :$F_DATA  $ROSS_EXP/<...>
+
+# with compression
+rsync -avz -e "$TAKA_SSH/id_Procapture_PC" $PROCAPTURE:$C_DATA :$D_DATA :$E_DATA :$F_DATA  $ROSS_EXP/<...> 
 
 
 # resubmit this script with --begin set to the next scheduled cron time
