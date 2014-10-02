@@ -20,22 +20,22 @@ SCHEDULE='59 23 * * *'
 #Some data are to be transferred with compression, others without.
 
 #Transferring data without compression
-rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_Ripple_PC" labadmin@128.135.180.217:"path to source files"  "path to Midway destination directory"
+rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_Ripple_PC" labadmin@128.135.180.217:/cygdrive/c/Data  <path to Midway destination directory>
 
 #Transferring data with compression
-rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_Ripple_PC" labadmin@128.135.180.217:"path to source files"  "path to Midway destination directory"
+rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_Ripple_PC" labadmin@128.135.180.217:/cygdrive/c/Data  <path to Midway destination directory>
 
 #Transferring data without compression
-rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_RT_Matlab_PC" labadmin@128.135.180.236:"path to source files"  "path to Midway destination directory"
+rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_RT_Matlab_PC" labadmin@128.135.180.236:/cygdrive/c/Models  <path to Midway destination directory>
 
 #Transferring data with compression
-rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_RT_Matlab_PC" labadmin@128.135.180.236:"path to source files"  "path to Midway destination directory"
+rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_RT_Matlab_PC" labadmin@128.135.180.236:/cygdrive/c/Models  <path to Midway destination directory>
 
 #Transferring data without compression
-rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_Procapture_PC" labadmin@128.135.180.159:"path to source files"  "path to Midway destination directory"
+rsync -vz -e "ssh -i /home/kazutaka/.ssh/id_Procapture_PC" labadmin@128.135.180.159:/cygdrive/c/Data :/cygdrive/d/Data :/cygdrive/e/Data :/cygdrive/f/Data  <path to Midway destination directory>
 
 #Transferring data with compression
-rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_Procapture_PC" labadmin@128.135.180.159:"path to source files"  "path to Midway destination directory"
+rsync -avz -e "ssh -i /home/kazutaka/.ssh/id_Procapture_PC" labadmin@128.135.180.159:/cygdrive/c/Data :/cygdrive/d/Data :/cygdrive/e/Data :/cygdrive/f/Data  <path to Midway destination directory>
 
 
 # resubmit this script with --begin set to the next scheduled cron time
