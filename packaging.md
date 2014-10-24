@@ -7,12 +7,23 @@ Initial ideas for packaging study and trial data.  See [datapackages](http://dat
 
 Sample file layout for storing XROMM **study** data and associated metadata:
 
-    /project/uc-xromm/studies/
+    /project/rossc/experiments/
       monkey-feeding/
         README.md
-        study.json
+        study.json              # contains study metadata
         models/
         trials/
+          <trial_id_a>/
+            trial.json          # contains metadata for each file
+            <file_1>
+            <file_2>
+            <file_3>
+          <trial_id_b>/
+            trial.json          # contains metadata for each file
+            <file_1>
+            <file_2>
+            <file_3>
+            
       lizard-locomotion/
         README.md
         study.json
@@ -104,9 +115,13 @@ Here's an example `study.json` file for the [`alligator-coracoid`](http://xmapor
 }
 ```
 
----
 
 ## Tools and Examples
+
+* [datapackage-json](https://github.com/maxogden/datapackage-json) - module to manage a `package.json` for [tabular data packages](http://dataprotocols.org/tabular-data-package/)
+
+* [dpm](https://github.com/okfn/dpm) - library and command line manager for
+  [data packages](http://dataprotocols.org/data-packages/)
 
 * [Data Packager](http://ckan.org/2014/06/09/the-open-knowledge-data-packager/) - The CKAN folks developed [a web app](http://datapackager.okfn.org/) for quickly creating and publishing [data packages](https://github.com/datasets).  This is just a nice example of a clean front-end for uploading data files as a package with associated metadata.
 
