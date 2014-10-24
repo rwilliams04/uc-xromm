@@ -7,7 +7,7 @@ Initial ideas for packaging study and trial data.  See [datapackages](http://dat
 
 Sample file layout for storing XROMM **study** data and associated metadata:
 
-    /project/rossc/experiments/
+    /project/rossc/lab/experiments/
       monkey-feeding/
         README.md
         study.json              # contains study metadata
