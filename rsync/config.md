@@ -10,7 +10,7 @@
     
 ## 2.  On source PCs, configure sshd for ssh usage without an active Cygwin session (these steps assume the labadmin account has administrator privileges on each machine):
 
-	A) Open a Cygwin session
+	A) From the desktop, right click Cygwin and select "Run as administrator" to open a Cygwin session
 
 	B) Enter the command: ssh-host-config
 
@@ -21,6 +21,9 @@
 		"Should this script attempt to create a new local account 'sshd'?" : yes
 		"Do you want to install sshd as a service?" : yes
 		"Enter the value of CYGWIN for the daemon" : ntsec
+		"Do you want to use a different name?" : no
+		"Create new privileged user account 'cyg_server'?" : yes
+		"Please enter the password" : <labadmin password>
 
 	D) Start the sshd service with the command : net start sshd
 	
