@@ -27,6 +27,9 @@
 
 	D) Start the sshd service with the command : net start sshd
 	
+	E) Alter sshd_config to prevent premature ssh session timeouts: 
+		sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 999999999/' /etc/sshd_config 
+	
 A tutorial that includes steps one and two can be found [here](http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin)
 
     
