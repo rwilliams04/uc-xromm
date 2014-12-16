@@ -18,7 +18,7 @@ SCHEDULE='59 23 * * *'
 
 
 SSH_PREFIX="ssh -i /home/$(whoami)/.ssh"       # prefix to ssh keys
-ROSS_EXP=/project/rossc/lab/experiments     # top-level destination directory
+ROSS_EXP=/project/rossc/Orofacial/BiteForce/Data     # top-level destination directory
 
 
 # Some data are to be transferred with compression, others without.
@@ -26,7 +26,7 @@ ROSS_EXP=/project/rossc/lab/experiments     # top-level destination directory
 # 2. specify appropriate destination sub-directory "$ROSS_EXP/<...>"
 
 
-RIPPLE_DATA="labadmin@128.135.180.217:/cygdrive/c/Data"
+RIPPLE_DATA="labadmin@128.135.180.217:/cygdrive/c/Users/labadmin/Trellis/dataFiles"
 
 # no compression
 rsync -av -e "$SSH_PREFIX/id_behavrsync"  $RIPPLE_DATA  $ROSS_EXP/<...>
