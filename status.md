@@ -6,6 +6,11 @@ See list of [open issues](https://github.com/rcc-uchicago/uc-xromm/issues) for s
 ---
 
 
+## 2015-01-09 
+
+Due to some issues with timeouts (dropped connections), we're currently testing **globus** as alternative to **rsync** for automated nightly transfer of trial data from Ross Lab source systems to Midway.  See [`globus`](globus) directory for details and [issue #4](https://github.com/rcc-uchicago/uc-xromm/issues/4) for status.
+
+
 ## 2014-09-25 
 
 The [UChicago instance](http://xromm.rcc.uchicago.edu) of the XMA Portal is now up and running.  File downloads from a provisional data directory are currently being tested.
