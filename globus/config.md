@@ -3,6 +3,14 @@
 
 ## Create authentication key for ssh to globus
 On midway generate public/private key pair
+    Note: the user submitting the cron-like file transfer script should generate these key pairs.
+
+    ssh-keygen -t rsa -b 1024 -C "$(whoami)@$(hostname)-$(date -I)"
+
+Save as ...
+
+    /home/kazutaka/.ssh/id_hostkeyname
+
 Go to public key file and copy key to clipboard
 
 Go to Globus.org and sign in
