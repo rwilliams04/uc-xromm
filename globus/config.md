@@ -1,9 +1,46 @@
 # Config Steps
 
 
-## Install Globus
+## Create authentication key for ssh to globus
+	On midway generate public/private key pair
+	Go to public key file and copy key to clipboard
 
-Install Globus Personal Connect on each source system.
+	Go to Globus.org and sign in
+	Go to Manage Identities
+		add linked identity
+		add ssh public key
+		paste public key and submit
+
+## Download Globus Connect Personal
+	On Globus.org go to Manage Endpoints	
+	Select add Globus Connect Personal
+	Enter Endpoint name for PC
+	Download and install Windows version
+
+## Installation
+	During installation select folder(s) to be accessible by Globus
+	Select option to make directory sharable
+	Select option to have Globus start up when Windows starts
+
+## Sharing
+	On Globus.org go to Manage Endpoints
+	Expand menu for the new endpoint and click the Sharing tab
+	Create shared endpoint
+	Enter in path of folder to share (ex. /C/Data)
+	Select Globus users/groups to share the endpoint with  
+
+## Submit sbatch script
+
+Submit sbatch script to run as a cron job, which will then execute the nightly transfers.
+
+Modify [`cron_globustemplate.sbatch`](cron_globustemplate.sbatch) with correct keys and paths.
+
+Rename:
+
+    mv cron_globustemplate.sbatch xromm-cron.sbatch
+
+Submit the resulting cron job with `sbatch`:
+
+    sbatch xromm-cron.sbatch
 
 
-## ???
