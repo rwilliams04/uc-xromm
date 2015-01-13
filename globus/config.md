@@ -3,7 +3,7 @@
 
 ## Create authentication key for ssh to globus
 On midway generate public/private key pair
-    Note: the user submitting the cron-like file transfer script should generate these key pairs.
+    Note: the user submitting the cron-like file transfer script should generate this key pair.
 
     ssh-keygen -t rsa -b 1024 -C "$(whoami)@$(hostname)-$(date -I)"
 
