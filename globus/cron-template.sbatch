@@ -48,4 +48,4 @@ echo "kazutaka#procapture_H/ ucrcc#midway${ROSS_EXP}/CAMERA4/ -r" | $SSH_PREFIX/
 # resubmit this script with --begin set to the next scheduled cron time
 # next-cron-time is a script that parses a cron schedule string and returns
 # the next execution time
-sbatch --quiet --begin=$(next-cron-time "$SCHEDULE") globuscommand5.sbatch
+sbatch --quiet --begin=$(next-cron-time "$SCHEDULE") cron-template.sbatch
