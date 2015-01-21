@@ -18,7 +18,7 @@ SCHEDULE='59 23 * * *'
 
 
 SSH_PREFIX="ssh -i /home/$(whoami)/.ssh"       # prefix to globus ssh key
-ROSS_EXP=/project/rossc/lab/experiments/XROMM/transfertest/globusRipple/Data     # top-level destination directory
+ROSS_EXP=/project/rossc/Orofacial/BiteForce/Data     # top-level destination directory
 GLOBUS_USERNAME=kazutaka         #Globus account username
 
 #Use endpoint-activate to refresh credentials for all endpoints
