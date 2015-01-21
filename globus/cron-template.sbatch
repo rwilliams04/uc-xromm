@@ -33,17 +33,17 @@ $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org endpoint-activate ka
 #Initiate transfers for each endpoint.  A check of the source and destination directories is made (checksum) 
 #and only files that are not identical to the source directory are transferred to the destination directory
 
-echo "kazutaka#Ripple_dataFiles/ ucrcc#midway${ROSS_EXP}/Neural/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
+echo "kazutaka#Ripple_dataFiles/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
 
-echo "kazutaka#procapture_Captures/ ucrcc#midway${ROSS_EXP}/Captures/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
+echo "kazutaka#procapture_Captures/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
 
-echo "kazutaka#procapture_E/ ucrcc#midway${ROSS_EXP}/CAMERA1/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
+echo "kazutaka#procapture_E/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
 
-echo "kazutaka#procapture_F/ ucrcc#midway${ROSS_EXP}/CAMERA2/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
+echo "kazutaka#procapture_F/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
 
-echo "kazutaka#procapture_G/ ucrcc#midway${ROSS_EXP}/CAMERA3/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
+echo "kazutaka#procapture_G/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
 
-echo "kazutaka#procapture_H/ ucrcc#midway${ROSS_EXP}/CAMERA4/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
+echo "kazutaka#procapture_H/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
 
 # resubmit this script with --begin set to the next scheduled cron time
 # next-cron-time is a script that parses a cron schedule string and returns
