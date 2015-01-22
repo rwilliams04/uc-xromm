@@ -35,8 +35,14 @@ On Globus.org go to Manage Endpoints
 Expand menu for the new endpoint and click the Sharing tab
 Create shared endpoint
 Enter in path of folder to share (ex. /C/Data)
-Select Globus users/groups to share the endpoint with  
+Select Globus users/groups to share the endpoint with
 
+## Permissions
+On Midway execute the following on the top-level destination directory 
+so that all files copied to it inherit read and write permissions for the pi-rossc group
+
+    setfacl -Rdm g:pi-rossc:rw /project/rossc/Orofacial/BiteForce/Data
+	
 ## Submit sbatch script
 
 Submit sbatch script to run as a cron job, which will then execute the nightly transfers.
