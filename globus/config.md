@@ -47,7 +47,7 @@ so that all files transferred to it inherit read and write permissions for the p
 
 Submit sbatch script to run as a cron job, which will then execute the nightly transfers.
 
-Modify [`cron_globustemplate.sbatch`](cron_globustemplate.sbatch) with correct keys and paths.
+Modify [`cron-template.sbatch`](cron-template.sbatch) with correct keys and paths.
 
 Rename:
 
