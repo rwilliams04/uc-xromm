@@ -39,7 +39,7 @@ Select Globus users/groups to share the endpoint with
 
 ## Permissions
 On Midway execute the following on the top-level destination directory 
-so that all files copied to it inherit read and write permissions for the pi-rossc group
+so that all files transferred to it inherit read and write permissions for the pi-rossc group
 
     setfacl -Rdm g:pi-rossc:rw /project/rossc/Orofacial/BiteForce/Data
 	
