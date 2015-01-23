@@ -47,11 +47,17 @@ so that all files transferred to it inherit read and write permissions for the p
 
 Submit sbatch script to run as a cron job, which will then execute the nightly transfers.
 
-Modify [`cron-template.sbatch`](cron-template.sbatch) with correct keys and paths.
+Modify [`cron-template.sbatch`](cron-template.sbatch) with correct keys and paths. 
+
+Change the last line of the script to include the name of the modified script (ie):
+
+    sbatch --quiet --begin=$(next-cron-time "$SCHEDULE") cron-template.sbatch
+    =>
+    sbatch --quiet --begin=$(next-cron-time "$SCHEDULE") xromm-cron.sbatch
 
 Rename:
 
-    mv cron_globustemplate.sbatch xromm-cron.sbatch
+    mv cron-template.sbatch xromm-cron.sbatch
 
 Submit the resulting cron job with `sbatch`:
 
