@@ -11,6 +11,6 @@ Steps to setup the transfer script:
 
 - [x] generate SSH keypairs for each source system
 - [x] copy each public key to the respective source system
-- [ ] update the `sbatch` template to reflect SSH key pairs and source file paths
-- [ ] test individual transfer commands in the `sbatch` script to ensure they work
+- [x] update the `sbatch` template to reflect SSH key pairs and source file paths
+- [x] test individual transfer commands in the `sbatch` script to ensure they work
 - [ ] rename and submit the resulting `sbatch` script.
