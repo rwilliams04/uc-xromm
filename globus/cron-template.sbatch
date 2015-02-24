@@ -16,36 +16,12 @@
 # this is to be submitted everyday at 11:59 PM
 SCHEDULE='59 23 * * *'
 
+sbatch globus_ripple.sbatch
+sbatch globus_procaptureCaptures.sbatch
+sbatch globus_procaptureE.sbatch
+sbatch globus_procaptureF.sbatch
+sbatch globus_procaptureG.sbatch
+sbatch globus_procaptureH.sbatch
 
-SSH_PREFIX="ssh -i /home/$(whoami)/.ssh"       # prefix to globus ssh key
-ROSS_EXP=/project/rossc/Orofacial/BiteForce/Data     # top-level destination directory
-GLOBUS_USERNAME=kazutaka         #Globus account username
-
-#Use endpoint-activate to refresh credentials for all endpoints
-$SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org endpoint-activate kazutaka#Ripple_dataFiles
-$SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org endpoint-activate kazutaka#procapture_Captures
-$SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org endpoint-activate kazutaka#procapture_E
-$SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org endpoint-activate kazutaka#procapture_F
-$SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org endpoint-activate kazutaka#procapture_G
-$SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org endpoint-activate kazutaka#procapture_H
-
-
-#Initiate transfers for each endpoint.  A check of the source and destination directories is made (checksum) 
-#and only files that are not identical to the source directory are transferred to the destination directory
-
-echo "kazutaka#Ripple_dataFiles/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
-
-echo "kazutaka#procapture_Captures/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
-
-echo "kazutaka#procapture_E/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
-
-echo "kazutaka#procapture_F/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
-
-echo "kazutaka#procapture_G/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
-
-echo "kazutaka#procapture_H/ ucrcc#midway${ROSS_EXP}/<...>/ -r" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org transfer -s 3
-
-# resubmit this script with --begin set to the next scheduled cron time
-# next-cron-time is a script that parses a cron schedule string and returns
 # the next execution time
 sbatch --quiet --begin=$(next-cron-time "$SCHEDULE") cron-template.sbatch
