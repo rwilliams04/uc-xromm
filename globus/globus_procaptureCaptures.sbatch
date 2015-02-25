@@ -1,5 +1,5 @@
 #!/bin/bash
-# use log and append to it
+# use output log and append to it
 #SBATCH --output=globus_procaptureCaptures.log
 #SBATCH --open-mode=append
 #SBATCH --account=pi-rossc
