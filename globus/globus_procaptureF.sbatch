@@ -2,12 +2,11 @@
 # use globus_ripple.log and append to it
 #SBATCH --output=globus_procaptureF.log
 #SBATCH --open-mode=append
-
-#account=pi-rossc
+#SBATCH --account=pi-rossc
 
 SSH_PREFIX="ssh -i /home/$(whoami)/.ssh"       # prefix to globus ssh key
-ROSS_EXP=/project/rcc/rwilliams/XROMM/globustest0216     # top-level destination directory
-GLOBUS_USERNAME=rwilliams
+ROSS_EXP=/project/rossc/Orofacial/BiteForce/Data     # top-level destination directory
+GLOBUS_USERNAME=kazutaka
 HOST_ENDPOINT=kazutaka#procapture_F #name of globus endpoint
 HOST_IP="128.135.180.159"
 LOGFILE=globus_procaptureF.log
