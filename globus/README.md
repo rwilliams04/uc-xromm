@@ -1,7 +1,7 @@
 The transfer of experimental data from the Ross Lab to Midway can be run as an `sbatch` script that executes a set of globus commands nightly on Midway.
 
 Taka (`kazutaka`) was made a member of the `cron-account` group, enabling him to
-submit the required `sbatch` script.   The [`cron_template.sbatch`](cron_template.sbatch) is a basic template that can be used for this.
+submit the required `sbatch` script.   The [`cron_template.sbatch`](https://github.com/rcc-uchicago/uc-xromm/blob/master/globus/transfer_scripts/cron-template.sbatch) is a basic template that can be used for this.
 
 The nightly transfers will require Taka to have SSH public keys on each source
 system that pair with a private key generated on Midway.  See the [config
