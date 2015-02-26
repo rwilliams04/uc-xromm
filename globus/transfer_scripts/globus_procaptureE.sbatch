@@ -35,6 +35,6 @@ taskID=$(echo $taskline | awk '{print $3}')
 #  then $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org wait -q $taskID
 #  transfer_status=$($SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org status $taskID -f status | awk '{print $2}')
 #  if [ $transfer_status == 'SUCCEEDED' ]
-#    then echo "${HOST_ENDPOINT}/*" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org delete -r
+#    then echo "${HOST_ENDPOINT}/[!\$\|{cygdrive}\|{Sys*Volume*Info*}]*" | $SSH_PREFIX/id_globus $GLOBUS_USERNAME@cli.globusonline.org delete -r
 #  fi
 #fi
