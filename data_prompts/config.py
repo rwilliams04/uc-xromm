@@ -1,9 +1,29 @@
 config = {
 
+    # info about the config file (version, change history, etc)
+    'meta': {
+        'version': "0.0.1",         # increment version whenever making changes 
+        'changes': [                # note changes
+            ('2015-04-10', "adding prompt types: open, enum_open, enum, bool")
+        ],
+        'prompt_subseq': {          # prompt subsequence choices
+            'study': [],            # no subseqs for studies
+            'trial': [
+                'trial_regular',
+                'trial_calibration'
+            ],
+            'file_transfer': [
+                'file_xray_vid',
+                'file_u_grid',
+                'file_calib'        # more filetypes to add here?
+            ]
+        }
+    },  # END META
+
     # prompts to present when creating a new study
     'study': [
         [
-            'open'                  # prompt type (open|enum|enum_fixed|bool)
+            'open'                  # prompt type (open|enum_open|enum|bool)
             'name',                 # key name for json output
             'Name of study?',       # prompt
             '''
@@ -141,6 +161,9 @@ config = {
 
     # prompts to present when transferring an xray video file
     'file_xray_vid': [
+
+        # TODO: add prompt options for this filetype
+
     ],
 
     # prompts to present when transferring an "undistortion grid" file
@@ -150,4 +173,8 @@ config = {
     # prompts to present when transferring an "calibration object" file
     'file_calib': [
     ]
+
+    # more filetypes to add here? if so, add `file_TYPE` to the 
+    # enumerated options for the `file_transfer` prompt above.
+    # 'file_TYPE': [ PROMPTS ]
 }
