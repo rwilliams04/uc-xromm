@@ -45,4 +45,3 @@ if more_info is "y":
     print "prompt for more stuff"
 
 print(json.dumps(d))
-
