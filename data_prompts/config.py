@@ -3,6 +3,7 @@ config = {
     # prompts to present when creating a new study
     'study': [
         [
+            'open'                  # prompt type (open|enum|enum_fixed|bool)
             'name',                 # key name for json output
             'Name of study?',       # prompt
             '''
@@ -13,6 +14,7 @@ config = {
             r'\w{3}'                # regex for sanity check on input
         ],
         [
+            'open'                  # TODO: add prompt types to entries below
             'desc',    
             'Description of study?', 
             '''
