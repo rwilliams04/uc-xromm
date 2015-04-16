@@ -12,7 +12,7 @@ when = datetime.datetime(now.year, now.month, now.day, 16, 30, 0)
 
 def hi():
     print "hi!"
-    os._exit(1)
+    
 
 runner = BlockingScheduler()
 runner.add_job(hi, 'date', run_date=when)
