@@ -102,3 +102,4 @@ if os.fork():
     sys.exit()
 
 scheduler.start()
+scheduler.shutdown()
