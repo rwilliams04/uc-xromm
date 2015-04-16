@@ -83,6 +83,7 @@ def transfer(id, source, dest):
 	t = Transfer(id, source, dest)
 	t.add_item(file_path, dest_path)
 	status, reason, result = api.transfer(t)
+	os._exit(1)
 
 
 ### SCHEDULE TRANSFER JOB ###
