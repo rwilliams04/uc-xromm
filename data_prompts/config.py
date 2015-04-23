@@ -23,7 +23,7 @@ config = {
     # prompts to present when creating a new study
     'study': [
         [
-            'open'                  # prompt type (open|enum_open|enum|bool)
+            'open',                  # prompt type (open|enum_open|enum|bool)
             'name',                 # key name for json output
             'Name of study?',       # prompt
             '''
@@ -34,128 +34,138 @@ config = {
             r'\w{3}'                # regex for sanity check on input
         ],
         [
-            'open'                  # TODO: add prompt types to entries below
-            'desc',    
-            'Description of study?', 
+            'open',                 # prompt types
+            'desc',                 # key name for json output
+            'Description of study?', # prompt 
             '''
             Please provide a short description of the purpose and aim of 
             this study.
             ''',                    # extra usage/help/info/examples
-            [], 
-            r'\w{3}'
+            [],                     # enumerated options (or null list if none)
+            r'\w{3}'                # regex for sanity check on input
         ],
         [
-            'pi',      
-            'Name of Principal Investigator?', 
+            'enum',                 # prompt type
+            'pi',                   # key name for json output
+            'Name of Principal Investigator?', #prompt
             '',                     # extra usage/help/info/examples
             ['Callum Ross'],        # enumerated option
             r'^\d$'                 # input must be numeric w/ enum options
         ],
         [
-            'leader',  
-            'Name of study leader?', 
+	    'enum',                 # prompt type
+            'leader',               # key name for json output
+            'Name of study leader?', # prompt
             '''
             The lab member most responsible for conducting this
             study.
             ''',                    # extra usage/help/info/examples
-            ['Callum Ross', 'Kazutaka Takashi'], 
-            r'^\d$'
+            ['Callum Ross', 'Kazutaka Takashi'],  # enumerated option 
+            r'^\d$'                 # input must be numeric w/ enum options
         ],
-        [
-            'meta_public',  
-            'Metadata for this study is public? (y|n)',
+        [   
+	    'bool',                 # prompt type
+            'meta_public',          # key name for json output
+            'Metadata for this study is public? (y|n)', #prompt
             '''
             Can the metadata for this study be made publicly available?
             Use `y` for yes or `n` for no.
-            ''',
-            ['y', 'n'], 
-            r'^[yn]$'
+            ''',                    # extra usage/help/info/examples
+            ['y', 'n'],             # boolean options
+            r'^[yn]$'               # regex for sanity check on input
         ],
         [
-            'data_public',  
-            'Data for this study is public? (y|n)',
+            'bool',                 # prompt type
+            'data_public',          # key name for json output
+            'Data for this study is public? (y|n)', # prompt
             '''
             Can the data files for this study be made publicly available?
             Use `y` for yes or `n` for no.
-            ''',
-            ['y', 'n'], 
-            r'^[yn]$'
+            ''',                    # extra usage/help/info/examples
+            ['y', 'n'],             # boolean options
+            r'^[yn]$'               # regex for sanity check on input
         ],
         [
-            'notes',  
-            'Additional notes or comments? (hit return for none)',
+            'open',                 # prompt type
+            'notes',                # key name for json output
+            'Additional notes or comments? (hit return for none)', # prompt
             '''
             Here you can provide additional info pertaining to this study
             that might be useful for future reference.
-            ''',
-            [],
-            r'\w?'
+            ''',                    # extra usage/help/info/examples
+            [],                     # null list
+            r'\w?'                  # regex for sanity check on input
         ]
     ],
 
     # prompt to present when creating a new trial
     'trial': [
         [
-            'type',  
-            'Type of trial?',
+            'enum_fixed',            # prompt type
+            'type',                  # key name for json output
+            'Type of trial?',        # prompt
             '''
-            "Calibration" trials are ...
-
-            ''',
-            ['regular', 'calibration'],
-            r'^[1-2]$'
+            Enter "1" for regular trials. Enter "2" for calibration trials
+            ''',                     # extra usage/help/info/examples
+            ['regular', 'calibration'],  # trial type list
+            r'^[1-2]$'               # regex for sanity check on input
         ]
     ],
 
     # prompts to present when creating a regular trial
     'regular_trial': [
         [
-            'name',
-            'Trial name? (max 50 chars)', 
+            'open',                  # prompt type
+            'name',                  # key name for json output
+            'Trial name? (max 50 chars)', # prompt
             "Name of this trial?",          # extra usage/examples/info
-            [],
-            r'\w[a-z_ ]+'
+            [],                      # null list
+            r'\w[a-z_ ]+'            # regex for sanity check on input
         ],
         [
-            'date',
-            "Trial date? (YYYY/MM/DD)", 
-            "Date of this trial?",          # extra usage/examples/info
-            [],
-            r'^20\d{2}/\d{2}/\d{2}'
+            'open',                  # prompt type
+            'date',                  # key name for json output
+            "Trial date? (YYYY/MM/DD)",  # prompt
+            "Date of this trial?",   # extra usage/examples/info
+            [],                      # null list
+            r'^20\d{2}/\d{2}/\d{2}'  # regex for sanity check on input
         ]
     ],
 
     # prompts to present when creating a calibration trial
     'calibration_trial': [
         [
-            'name',
-            'Trial name? (max 50 chars)', 
-            "Name of this trial?",          # extra usage/examples/info
-            [],
-            r'\w[a-z_ ]+'
+            'open',                  # prompt type
+            'name',                  # key name for json output
+            'Trial name? (max 50 chars)', # prompt
+            "Name of this trial?",   # extra usage/examples/info
+            [],                      # null list
+            r'\w[a-z_ ]+'            # regex for sanity check on input
         ],
         [
-            'date',
-            "Trial date? (YYYY/MM/DD)", 
-            "Date of this trial?",          # extra usage/examples/info
-            [],
-            r'^20\d{2}/\d{2}/\d{2}'
+            'open',                  # prompt type
+            'date',                  # key name for json output
+            "Trial date? (YYYY/MM/DD)",   # prompt
+            "Date of this trial?",   # extra usage/examples/info
+            [],                      # null list
+            r'^20\d{2}/\d{2}/\d{2}'  # regex for sanity check on input
         ]
     ],
 
     # prompts to present when transferring a data file
     'file_transfer': [
         [
-            'filetype',
-            "Type of file?",
+            'enum_fixed',            # prompt type
+            'filetype',              # key name for json output
+            "Type of file?",         # prompt
             "Please choose one of the enumerated options.",
             [
                 ("X-Ray Video", 'file_xray_vid'),
                 ("Undistortion Grid", 'file_u_grid'),
                 ("Calibration Object", 'file_calib')
                 # ... &c.
-            ],
-            r'^\d$'
+            ],                       # extra usage/examples/info
+            r'^\d$'                  # regex for sanity check on input
         ]
     ],
 
