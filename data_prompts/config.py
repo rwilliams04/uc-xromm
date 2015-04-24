@@ -125,7 +125,7 @@ config = {
         [
             'open',                  # prompt type
             'date',                  # key name for json output
-            "Trial date? (YYYY/MM/DD)",  # prompt
+            'Trial date? (YYYY/MM/DD)',  # prompt
             "Date of this trial?",   # extra usage/examples/info
             [],                      # null list
             r'^20\d{2}/\d{2}/\d{2}'  # regex for sanity check on input
@@ -145,7 +145,7 @@ config = {
         [
             'open',                  # prompt type
             'date',                  # key name for json output
-            "Trial date? (YYYY/MM/DD)",   # prompt
+            'Trial date? (YYYY/MM/DD)',   # prompt
             "Date of this trial?",   # extra usage/examples/info
             [],                      # null list
             r'^20\d{2}/\d{2}/\d{2}'  # regex for sanity check on input
@@ -157,27 +157,53 @@ config = {
         [
             'enum_fixed',            # prompt type
             'filetype',              # key name for json output
-            "Type of file?",         # prompt
+            'Type of file?',         # prompt
             "Please choose one of the enumerated options.",
-            [
-                ("X-Ray Video", 'file_xray_vid'),
-                ("Undistortion Grid", 'file_u_grid'),
-                ("Calibration Object", 'file_calib')
-                # ... &c.
+            [ 
+                ("Undistortion Grid", 'file_u_grid'), # Calibration trial only
+                ("Calibration Object", 'file_calib'), # Calibration trial only
+		("X-Ray Video", 'file_xray_vid'),     # Regular trial only
+                ("Standard Video", 'file_std_vid'),   # Regular trial only
+		("EMG File", 'file_emg'),             # Regular trial only
+		("Misc. File", 'file_misc'),          # Either trial type
+		("Proc. Data", 'file_proc_data')      # Either trial type
+		("3D Vol.", 'file_3d_vol'),           # Subject must be selected (not linked to trial)
             ],                       # extra usage/examples/info
-            r'^\d$'                  # regex for sanity check on input
+            r'^[1-7]$'               # regex for sanity check on input
         ]
     ],
 
     # prompts to present when transferring an xray video file
     'file_xray_vid': [
-
-        # TODO: add prompt options for this filetype
-
+	[
+            'enum_open',             # prompt type
+            'trial_select',          # key name for json output
+            'Select regular trial:', # prompt
+	    "Select regular trial from enumerated list",  # extra usage/examples/info
+            r'^\d$'                  # input must be numeric w/ enum options
+	],
+	[
+            'enum_fixed',            # prompt type
+            'camera'                 # key name for json output
+            'Select camera:'         # prompt
+            "Select camera from enumerated list", # extra usage/examples/info
+	    r'^[1-4]$'               # regex for sanity check on input  
+	],
+	[
+            'open',                  # prompt type
+            'file_select',           # key name for json output
+            "Enter file name:",      # prompt
+	    '''
+            Enter name of file. The file name will be compared against
+            the names of files in relevant directory.
+            ''',                     # extra usage/examples/info 
+            r'\w[a-z_ ]+'            # regex for sanity check on input
+	]
     ],
 
     # prompts to present when transferring an "undistortion grid" file
     'file_u_grid': [
+        # TODO: add prompt options for this filetype
     ],
 
     # prompts to present when transferring an "calibration object" file
