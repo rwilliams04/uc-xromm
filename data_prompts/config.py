@@ -2,9 +2,9 @@ config = {
 
     # info about the config file (version, change history, etc)
     'meta': {
-        'version': "0.0.1",         # increment version whenever making changes 
+        'version': "0.0.2",         # increment version whenever making changes 
         'changes': [                # note changes
-            ('2015-04-10', "adding prompt types: open, enum_open, enum, bool")
+            ('2015-04-24', "adding all file types and associated prompts")
         ],
         'prompt_subseq': {          # prompt subsequence choices
             'study': [],            # no subseqs for studies
