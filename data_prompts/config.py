@@ -13,9 +13,14 @@ config = {
                 'trial_calibration'
             ],
             'file_transfer': [
-                'file_xray_vid',
                 'file_u_grid',
-                'file_calib'        # more filetypes to add here?
+                'file_calib',
+                'file_xray_vid',
+                'file_std_vid',
+                'file_emg',
+                'file_misc',
+                'file_proc_data',
+                'file_3d_vol
             ]
         }
     },  # END META
@@ -158,7 +163,7 @@ config = {
             'enum_fixed',            # prompt type
             'filetype',              # key name for json output
             'Type of file?',         # prompt
-            "Please choose one of the enumerated options.",
+            "Please choose one of the enumerated options.", # extra usage/examples/info
             [ 
                 ("Undistortion Grid", 'file_u_grid'), # Calibration trial only
                 ("Calibration Object", 'file_calib'), # Calibration trial only
@@ -168,25 +173,28 @@ config = {
 		("Misc. File", 'file_misc'),          # Either trial type
 		("Proc. Data", 'file_proc_data')      # Either trial type
 		("3D Vol.", 'file_3d_vol'),           # Subject must be selected (not linked to trial)
-            ],                       # extra usage/examples/info
+            ],                       # enumerated options
             r'^[1-7]$'               # regex for sanity check on input
         ]
     ],
 
-    # prompts to present when transferring an xray video file
-    'file_xray_vid': [
+
+    # prompts to present when transferring an "undistortion grid" file
+    'file_u_grid': [
 	[
             'enum_open',             # prompt type
             'trial_select',          # key name for json output
-            'Select regular trial:', # prompt
-	    "Select regular trial from enumerated list",  # extra usage/examples/info
+            'Select calibration trial:', # prompt
+	    "Select calibration trial from enumerated list",  # extra usage/examples/info
+            [],                      # enumerated options
             r'^\d$'                  # input must be numeric w/ enum options
 	],
 	[
             'enum_fixed',            # prompt type
-            'camera'                 # key name for json output
-            'Select camera:'         # prompt
+            'camera',                # key name for json output
+            'Select camera:',        # prompt
             "Select camera from enumerated list", # extra usage/examples/info
+            [1, 2, 3, 4],            # enumerated options 
 	    r'^[1-4]$'               # regex for sanity check on input  
 	],
 	[
@@ -196,21 +204,197 @@ config = {
 	    '''
             Enter name of file. The file name will be compared against
             the names of files in relevant directory.
-            ''',                     # extra usage/examples/info 
-            r'\w[a-z_ ]+'            # regex for sanity check on input
+            ''',                     # extra usage/examples/info
+            [],                      # null list 
+            r'\w+'            # regex for sanity check on input
 	]
-    ],
-
-    # prompts to present when transferring an "undistortion grid" file
-    'file_u_grid': [
-        # TODO: add prompt options for this filetype
     ],
 
     # prompts to present when transferring an "calibration object" file
     'file_calib': [
-    ]
+        [
+            'enum_open',             # prompt type
+            'trial_select',          # key name for json output
+            'Select calibration trial:', # prompt
+            "Select calibration trial from enumerated list",  # extra usage/examples/info
+            [],                      # enumerated options
+            r'^\d$'                  # input must be numeric w/ enum options
+        ],
+        [
+            'enum_fixed',            # prompt type
+            'camera',                # key name for json output
+            'Select camera:',        # prompt
+            "Select camera from enumerated list", # extra usage/examples/info
+            [1, 2, 3, 4],            # enumerated options 
+            r'^[1-4]$'               # regex for sanity check on input
+        ],
+        [
+            'open',                  # prompt type
+            'file_select',           # key name for json output
+            "Enter file name:",      # prompt
+            '''
+            Enter name of file. The file name will be compared against
+            the names of files in relevant directory.
+            ''',                     # extra usage/examples/info
+            [],                      # null list
+            r'\w+'            # regex for sanity check on input
+        ]
+    ],
+	
+    # prompts to present when transferring an xray video file
+    'file_xray_vid': [
+	[
+            'enum_open',             # prompt type
+            'trial_select',          # key name for json output
+            'Select regular trial:', # prompt
+	    "Select regular trial from enumerated list",  # extra usage/examples/info
+            [],                      # enumerated options
+            r'^\d$'                  # input must be numeric w/ enum options
+	],
+	[
+            'enum_fixed',            # prompt type
+            'camera'                 # key name for json output
+            'Select camera:'         # prompt
+            "Select camera from enumerated list", # extra usage/examples/info
+            [1, 2, 3, 4],            # enumerated options
+	    r'^[1-4]$'               # regex for sanity check on input
+	],  
+	[
+            'open',                  # prompt type
+            'file_select',           # key name for json output
+            "Enter file name:",      # prompt
+	    '''
+            Enter name of file. The file name will be compared against
+            the names of files in relevant directory.
+            ''',                     # extra usage/examples/info
+            [],                      # null list 
+            r'\w+'            # regex for sanity check on input
+	]
+    ],
 
-    # more filetypes to add here? if so, add `file_TYPE` to the 
-    # enumerated options for the `file_transfer` prompt above.
-    # 'file_TYPE': [ PROMPTS ]
+    
+    # prompts to present when transferring a standard video file
+    'file_std_vid': [
+        [
+            'enum_open',             # prompt type
+            'trial_select',          # key name for json output
+            'Select regular trial:', # prompt
+            "Select regular trial from enumerated list",  # extra usage/examples/info
+            [],                      # enumerated options
+            r'^\d$'                  # input must be numeric w/ enum options
+        ],
+        [
+            'enum_fixed',            # prompt type
+            'camera'                 # key name for json output
+            'Select camera:'         # prompt
+            "Select camera from enumerated list", # extra usage/examples/info
+            [1, 2, 3, 4],            # enumerated options
+            r'^[1-4]$'               # regex for sanity check on input
+        ],
+        [
+            'open',                  # prompt type
+            'file_select',           # key name for json output
+            "Enter file name:",      # prompt
+            '''
+            Enter name of file. The file name will be compared against
+            the names of files in relevant directory.
+            ''',                     # extra usage/examples/info
+            [],                      # null list
+            r'\w+'            # regex for sanity check on input
+        ]
+    ],    
+    
+    'file_emg': [
+        [
+            'enum_open',             # prompt type
+            'trial_select',          # key name for json output
+            'Select regular trial:', # prompt
+            "Select regular trial from enumerated list",  # extra usage/examples/info
+            [],                      # enumerated options
+            r'^\d$'                  # input must be numeric w/ enum options
+        ],
+        [
+            'open',                  # prompt type
+            'file_select',           # key name for json output
+            "Enter file name:",      # prompt
+            '''
+            Enter name of file. The file name will be compared against
+            the names of files in relevant directory.
+            ''',                     # extra usage/examples/info
+            [],                      # null list
+            r'\w+'            # regex for sanity check on input
+        ]
+    ],
+
+    # prompts to present when transferring a misc. file
+    'file_misc': [
+        [
+            'enum_open',             # prompt type
+            'trial_select',          # key name for json output
+            'Select regular trial:', # prompt
+            "Select regular trial from enumerated list",  # extra usage/examples/
+info
+            [],                      # enumerated options
+            r'^\d$'                  # input must be numeric w/ enum options
+        ],
+        [
+            'open',                  # prompt type
+            'file_select',           # key name for json output
+            "Enter file name:",      # prompt
+            '''
+            Enter name of file. The file name will be compared against
+            the names of files in relevant directory.
+            ''',                     # extra usage/examples/info
+            [],                      # null list
+            r'\w+'            # regex for sanity check on input
+        ]
+    ],
+
+    # prompts to present when transferring a proc. file
+    'file_proc': [
+        [
+            'enum_open',             # prompt type
+            'trial_select',          # key name for json output
+            'Select regular trial:', # prompt
+            "Select regular trial from enumerated list",  # extra usage/examples/
+info
+            [],                      # enumerated options
+            r'^\d$'                  # input must be numeric w/ enum options
+        ],
+        [
+            'open',                  # prompt type
+            'file_select',           # key name for json output
+            "Enter file name:",      # prompt
+            '''
+            Enter name of file. The file name will be compared against
+            the names of files in relevant directory.
+            ''',                     # extra usage/examples/info
+            [],                      # null list
+            r'\w+'            # regex for sanity check on input
+        ]
+    ],  
+
+    # prompts to present when transferring a 3D volume file
+    'file_3d_vol': [
+        [
+            'enum_open',             # prompt type
+            'subject',               # key name for json output
+            'Name of subject?',      # prompt
+            "Select subject from enumerated list",  # extra usage/examples/info
+	    [],                      # enumerated options (or null list if none)
+            r'\w+'                  # input must be numeric w/ enum options
+        ],
+        [
+            'open',                  # prompt type
+            'file_select',           # key name for json output
+            "Enter file name:",      # prompt
+            '''
+            Enter name of file. The file name will be compared against
+            the names of files in relevant directory.
+            ''',                     # extra usage/examples/info
+            [],                      # null list
+            r'\w+'                   # regex for sanity check on input
+        ]
+    ],
+
 }
