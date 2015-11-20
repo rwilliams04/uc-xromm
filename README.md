@@ -21,6 +21,8 @@ See our [notes](portal.md) for an overview of the XMA portal.
 The XMA Portal source files are available via [a private repo](https://github.com/rcc-uchicago/xma-portal).  Contact [@joyrexus](https://github.com/joyrexus) for access.
 
 
+**xhub** is a simple web service currently being used to persist [uc-xromm](https://github.com/rcc-uchicago/uc-xromm)-related study data.  It functions as a web service for the [`xpub`](https://github.com/rcc-uchicago/xpub) client, storing/retrieving the JSON-encoded metadata sent/requested by the client.
+
 ## Players
 
 #### Ross Lab
